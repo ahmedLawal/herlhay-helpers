@@ -3320,7 +3320,7 @@ class AuthenticationInterceptorService {
         this.router = router;
     }
     intercept(req, next) {
-        // debugger
+        debugger;
         if (HHenvironment.token && req.url.startsWith(HHenvironment.apiBaseUrl)) {
             const reqAuth = req.clone({
                 url: req.url,
