@@ -3320,7 +3320,7 @@ class AuthenticationInterceptorService {
         this.router = router;
     }
     intercept(req, next) {
-        debugger;
+        // debugger
         if (HHenvironment.token && req.url.startsWith(HHenvironment.apiBaseUrl)) {
             const reqAuth = req.clone({
                 url: req.url,
@@ -3336,7 +3336,7 @@ class AuthenticationInterceptorService {
                         console.error(`About to be loggeed out due to 401 `, e, req);
                         localStorage.clear();
                         sessionStorage.clear();
-                        location.href = '/auth/login';
+                        location.href = `/${Config.authBaseRoute}/login`;
                     }
                 },
             }));

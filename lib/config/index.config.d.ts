@@ -32,4 +32,5 @@ export declare class Config {
     static salesMail: string;
     static supportMail: string;
     static supportURL: string;
+    static authBaseRoute: string;
 }
