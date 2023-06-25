@@ -1,0 +1,33 @@
+import { EventEmitter, OnInit } from '@angular/core';
+import { SVGIconType } from '../svg-icon/svg-icon.model';
+import { UtilityService } from '../../../services/utility.service';
+import * as i0 from "@angular/core";
+export declare class FileUploadComponent implements OnInit {
+    uS: UtilityService;
+    help: string;
+    label: string;
+    class: string;
+    icon: SVGIconType;
+    disabled: boolean;
+    multiple: boolean;
+    mini: boolean;
+    useDocumentModal: boolean;
+    listFiles: boolean;
+    accept: string;
+    set _accept(v: string);
+    file: File;
+    fileChange: EventEmitter<File>;
+    files: File[];
+    filesChange: EventEmitter<File[]>;
+    imageString: string;
+    constructor(uS: UtilityService);
+    ngOnInit(): void;
+    get isSingle(): boolean;
+    private acceptFiles;
+    private emitFiles;
+    onUpload(event: any): void;
+    removeFile(index: number): void;
+    openDialog(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<FileUploadComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FileUploadComponent, "app-file-upload", never, { "help": { "alias": "help"; "required": false; }; "label": { "alias": "label"; "required": false; }; "class": { "alias": "class"; "required": false; }; "icon": { "alias": "icon"; "required": false; }; "disabled": { "alias": "disabled"; "required": false; }; "multiple": { "alias": "multiple"; "required": false; }; "mini": { "alias": "mini"; "required": false; }; "useDocumentModal": { "alias": "useDocumentModal"; "required": false; }; "listFiles": { "alias": "listFiles"; "required": false; }; "_accept": { "alias": "accept"; "required": false; }; "file": { "alias": "file"; "required": false; }; "files": { "alias": "files"; "required": false; }; }, { "fileChange": "fileChange"; "filesChange": "filesChange"; }, never, never, true, never>;
+}

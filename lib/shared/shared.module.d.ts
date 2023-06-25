@@ -1,0 +1,37 @@
+import * as i0 from "@angular/core";
+import * as i1 from "./components/autocomplete/autocomplete.component";
+import * as i2 from "./components/btn/btn.component";
+import * as i3 from "./components/chip-list-autocomplete/chip-list-autocomplete.component";
+import * as i4 from "@angular/common";
+import * as i5 from "./components/confirm-dialog/confirm-dialog.component";
+import * as i6 from "./components/count/count.component";
+import * as i7 from "./components/feedback-card/feedback-card.component";
+import * as i8 from "./components/file-upload/file-upload.component";
+import * as i9 from "./components/form-generator/form-generator.component";
+import * as i10 from "./components/grid-or-list/grid-or-list.component";
+import * as i11 from "./components/import-items/import-items.component";
+import * as i12 from "./components/info-icon/info-icon.component";
+import * as i13 from "./components/listing-filters/listing-filters.component";
+import * as i14 from "./components/loader/loader.component";
+import * as i15 from "./components/mini-search-list/mini-search-list.component";
+import * as i16 from "./components/modal/modal.component";
+import * as i17 from "./components/modal-form/modal-form.component";
+import * as i18 from "./components/modal-header/modal-header.component";
+import * as i19 from "./components/no-list/no-list.component";
+import * as i20 from "./components/number-items-selected/number-items-selected.component";
+import * as i21 from "./components/page-template/page-template.component";
+import * as i22 from "./components/progress-bar-large/progress-bar-large.component";
+import * as i23 from "./components/response-card/response-card.component";
+import * as i24 from "./components/search-box/search-box.component";
+import * as i25 from "./components/svg-icon/svg-icon.component";
+import * as i26 from "./components/table-https/table-https.component";
+import * as i27 from "./components/table-plain/table-plain.component";
+import * as i28 from "./components/text/text.component";
+import * as i29 from "./directives/directives.module";
+import * as i30 from "./components/input/input.module";
+import * as i31 from "./pipes/utility.pipe";
+export declare class SharedModule {
+    static ɵfac: i0.ɵɵFactoryDeclaration<SharedModule, never>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<SharedModule, never, [typeof i1.AutocompleteComponent, typeof i2.BtnComponent, typeof i3.ChipListAutocompleteComponent, typeof i4.CommonModule, typeof i5.ConfirmDialogComponent, typeof i6.CountComponent, typeof i7.FeedbackCardComponent, typeof i8.FileUploadComponent, typeof i9.FormGeneratorComponent, typeof i10.GridOrListComponent, typeof i11.ImportItemsComponent, typeof i12.InfoIconComponent, typeof i13.ListingFiltersComponent, typeof i14.LoaderComponent, typeof i15.MiniSearchListComponent, typeof i16.ModalComponent, typeof i17.ModalFormComponent, typeof i18.ModalHeaderComponent, typeof i19.NoListComponent, typeof i20.NumberItemsSelectedComponent, typeof i21.PageTemplateComponent, typeof i22.ProgressBarLargeComponent, typeof i23.ResponseCardComponent, typeof i24.SearchBoxComponent, typeof i25.SvgIconComponent, typeof i26.TableHttpsComponent, typeof i27.TablePlainComponent, typeof i28.TextComponent], [typeof i1.AutocompleteComponent, typeof i2.BtnComponent, typeof i3.ChipListAutocompleteComponent, typeof i5.ConfirmDialogComponent, typeof i6.CountComponent, typeof i29.DirectivesModule, typeof i7.FeedbackCardComponent, typeof i8.FileUploadComponent, typeof i9.FormGeneratorComponent, typeof i10.GridOrListComponent, typeof i11.ImportItemsComponent, typeof i12.InfoIconComponent, typeof i30.InputModule, typeof i13.ListingFiltersComponent, typeof i14.LoaderComponent, typeof i15.MiniSearchListComponent, typeof i18.ModalHeaderComponent, typeof i16.ModalComponent, typeof i19.NoListComponent, typeof i20.NumberItemsSelectedComponent, typeof i21.PageTemplateComponent, typeof i23.ResponseCardComponent, typeof i24.SearchBoxComponent, typeof i25.SvgIconComponent, typeof i26.TableHttpsComponent, typeof i27.TablePlainComponent, typeof i28.TextComponent, typeof i31.UtilityPipesModule, typeof i17.ModalFormComponent, typeof i22.ProgressBarLargeComponent]>;
+    static ɵinj: i0.ɵɵInjectorDeclaration<SharedModule>;
+}
