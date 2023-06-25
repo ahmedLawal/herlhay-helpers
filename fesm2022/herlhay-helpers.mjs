@@ -3332,6 +3332,7 @@ class AuthenticationInterceptorService {
                 error: (e) => {
                     // debugger
                     if (e['status'] == 401 && location.pathname != '/auth/login') {
+                        debugger;
                         console.error(`About to be loggeed out due to 401 `, e, req);
                         localStorage.clear();
                         sessionStorage.clear();
