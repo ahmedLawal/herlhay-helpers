@@ -15,8 +15,8 @@
   "module": "build/fesm2022/herlhay-helpers.mjs",
   "typings": "build/index.d.ts",
   "exports": {
-    "./package.json": {
-      "default": "./package.json"
+    "./build/package.json": {
+      "default": "./build/package.json"
     },
     ".": {
       "types": "./build/index.d.ts",
