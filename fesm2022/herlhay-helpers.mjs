@@ -3062,7 +3062,7 @@ class ApiService {
                     responseType: 'json',
                     ...extras?.options,
                 })
-                    .pipe(retry(this.retryCount), map((r) => (extras?.dontDecryptResponse ? r : this.decrypt(r))), tap((x) => (this.showRoutes ? console.log(x) : null)), catchError(this.handleRequestError))
+                    .pipe(retry(this.retryCount), map((r) => this.handleResponse(extras?.dontDecryptResponse ? r : this.decrypt(r))), tap((x) => (this.showRoutes ? console.log(x) : null)), catchError(this.handleRequestError))
                     .toPromise()
                     .then((r) => {
                     res.next(r);
@@ -3091,7 +3091,7 @@ class ApiService {
                 headers: new HttpHeaders(this.headers),
                 responseType: 'json',
             });
-            return this.http.request(req).pipe(map((r) => (HHenvironment.encryptAPIRequests ? this.decrypt(r) : r)), catchError(this.handleRequestError));
+            return this.http.request(req).pipe(map((r) => this.handleResponse(HHenvironment.encryptAPIRequests ? this.decrypt(r) : r)), catchError(this.handleRequestError));
         };
         this.getFromlocal = (route, parameters, options) => {
             return new Observable((res) => {
@@ -3163,7 +3163,7 @@ class ApiService {
                 headers: new HttpHeaders(this.headers),
                 responseType: 'json',
             })
-                .pipe(map((r) => this.decrypt(r)), catchError(this.handleRequestError));
+                .pipe(map((r) => this.handleResponse(this.decrypt(r))), catchError(this.handleRequestError));
         };
         this.deleteWithBody = (route, body, options) => {
             this.logRoutes('delete', route);
@@ -3171,7 +3171,7 @@ class ApiService {
                 headers: new HttpHeaders(this.headers),
                 responseType: 'json',
             });
-            return this.http.request(req).pipe(map((r) => this.decrypt(r)), catchError(this.handleRequestError));
+            return this.http.request(req).pipe(map((r) => this.handleResponse(this.decrypt(r))), catchError(this.handleRequestError));
         };
         this.deleteText = (route) => this.delete(route, {
             headers: new HttpHeaders(this.headers),
@@ -3183,6 +3183,9 @@ class ApiService {
             console.log(method, route, ...extras);
         }
     }
+    handleResponse(response) {
+        return response;
+    }
     //#region PATCH
     patch(route, body, extras) {
         this.logRoutes('post', route, body);
@@ -3193,7 +3196,7 @@ class ApiService {
             responseType: 'json',
             ...extras?.options,
         })
-            .pipe(map((r) => (HHenvironment.encryptAPIRequests ? this.decrypt(r) : r)), catchError(this.handleRequestError));
+            .pipe(map((r) => this.handleResponse(HHenvironment.encryptAPIRequests ? this.decrypt(r) : r)), catchError(this.handleRequestError));
     }
     patchFile(route, body) {
         return this.patch(route, body, {
@@ -3215,7 +3218,7 @@ class ApiService {
             responseType: 'json',
             ...extras?.options,
         })
-            .pipe(map((r) => (HHenvironment.encryptAPIRequests ? this.decrypt(r) : r)), catchError(this.handleRequestError));
+            .pipe(map((r) => this.handleResponse(HHenvironment.encryptAPIRequests ? this.decrypt(r) : r)), catchError(this.handleRequestError));
     }
     postWithProgress(route, body) {
         return new Observable((sub) => {
@@ -3295,7 +3298,7 @@ class ApiService {
             responseType: 'json',
             ...extras?.options,
         })
-            .pipe(map((r) => this.decrypt(r)), catchError(this.handleRequestError));
+            .pipe(map((r) => this.handleResponse(this.decrypt(r))), catchError(this.handleRequestError));
     }
     putFile(route, body) {
         return this.put(route, body, {

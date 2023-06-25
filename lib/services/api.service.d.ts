@@ -1,5 +1,5 @@
 import { EncryptorService } from './encryptor.service';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { CacheService } from './cache.service';
 import { LocalCacheService } from './local-cache.service';
@@ -31,7 +31,8 @@ export declare class ApiService {
         status: 'success' | 'error';
     }) => any;
     private logRoutes;
-    private handleRequestError;
+    handleResponse(response: any): any;
+    handleRequestError: (err: HttpErrorResponse) => Observable<never>;
     patch<T = any>(route: string, body?: any, extras?: IExtras): Observable<Resp<T>>;
     patchFile<T = any>(route: string, body: FormData): Observable<Resp<T>>;
     post<T = any>(route: string, body?: any, extras?: IExtras): Observable<Resp<T>>;
