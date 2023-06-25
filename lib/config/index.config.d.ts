@@ -33,4 +33,8 @@ export declare class Config {
     static supportMail: string;
     static supportURL: string;
     static authBaseRoute: string;
+    static states: {
+        isoCode: string;
+        name: string;
+    }[];
 }

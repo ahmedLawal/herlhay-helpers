@@ -586,6 +586,48 @@ class Config {
     static { this.salesMail = 'sales@iras.ng'; }
     static { this.supportMail = 'support@iras.ng'; }
     static { this.supportURL = 'https://support.iras.ng/'; }
+    static { this.states = [
+        {
+            isoCode: 'NG-FC',
+            name: 'Abuja Federal Capital Territory',
+        },
+        { isoCode: 'NG-AB', name: 'Abia' },
+        { isoCode: 'NG-AD', name: 'Adamawa' },
+        { isoCode: 'NG-AK', name: 'Akwa Ibom' },
+        { isoCode: 'NG-AN', name: 'Anambra' },
+        { isoCode: 'NG-BA', name: 'Bauchi' },
+        { isoCode: 'NG-BY', name: 'Bayelsa' },
+        { isoCode: 'NG-BE', name: 'Benue' },
+        { isoCode: 'NG-BO', name: 'Borno' },
+        { isoCode: 'NG-CR', name: 'Cross River' },
+        { isoCode: 'NG-DE', name: 'Delta' },
+        { isoCode: 'NG-EB', name: 'Ebonyi' },
+        { isoCode: 'NG-ED', name: 'Edo' },
+        { isoCode: 'NG-EK', name: 'Ekiti' },
+        { isoCode: 'NG-EN', name: 'Enugu' },
+        { isoCode: 'NG-GO', name: 'Gombe' },
+        { isoCode: 'NG-IM', name: 'Imo' },
+        { isoCode: 'NG-JI', name: 'Jigawa' },
+        { isoCode: 'NG-KD', name: 'Kaduna' },
+        { isoCode: 'NG-KN', name: 'Kano' },
+        { isoCode: 'NG-KT', name: 'Katsina' },
+        { isoCode: 'NG-KE', name: 'Kebbi' },
+        { isoCode: 'NG-KO', name: 'Kogi' },
+        { isoCode: 'NG-KW', name: 'Kwara' },
+        { isoCode: 'NG-LA', name: 'Lagos' },
+        { isoCode: 'NG-NA', name: 'Nasarawa' },
+        { isoCode: 'NG-NI', name: 'Niger' },
+        { isoCode: 'NG-OG', name: 'Ogun' },
+        { isoCode: 'NG-ON', name: 'Ondo' },
+        { isoCode: 'NG-OS', name: 'Osun' },
+        { isoCode: 'NG-OY', name: 'Oyo' },
+        { isoCode: 'NG-PL', name: 'Plateau' },
+        { isoCode: 'NG-RI', name: 'Rivers' },
+        { isoCode: 'NG-SO', name: 'Sokoto' },
+        { isoCode: 'NG-TA', name: 'Taraba' },
+        { isoCode: 'NG-YO', name: 'Yobe' },
+        { isoCode: 'NG-ZA', name: 'Zamfara' },
+    ]; }
 }
 
 class Loader {
