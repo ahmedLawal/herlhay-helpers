@@ -1,4 +1,4 @@
-import { Environment } from "../build/lib/shared/classes/environment.class";
+import { Environment } from "../lib/shared/classes/environment.class";
 /**
  * Environment object
  */
